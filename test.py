@@ -3,7 +3,7 @@ from pygame.locals import *
 
 pygame.init()
 
-fenetre = pygame.display.set_mode((640,480),FULLSCREEN)
+fenetre = pygame.display.set_mode((1280,720),RESIZABLE)
 
 continuer = 1
 
