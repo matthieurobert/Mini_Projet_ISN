@@ -1,4 +1,4 @@
-import random
+-import random
 
 nombre=['as','2','3','4','5','6','7','8','9','10','Valet','Dame','Roi']
 couleur=[' de coeur',' de carreau',' de pique',' de trèfle']
