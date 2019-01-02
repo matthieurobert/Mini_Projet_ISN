@@ -8,7 +8,7 @@ fenetre = pygame.display.set_mode((1280,720), FULLSCREEN)
 table = pygame.image.load("blackjack_table.png").convert()
 fenetre.blit(table, (0,0))
 
-cartes(carte, 485, 435)
+cartes(as_p, 485, 435)
 
 pygame.display.flip()
 

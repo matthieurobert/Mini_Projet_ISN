@@ -65,4 +65,4 @@ def cartes(carte, x, y):
 	Q_ca = pygame.image.load("cartes/Q♦.png").convert()
 	K_ca = pygame.image.load("cartes/K♦.png").convert()
 
-	fenetre.blit(carte, (x,y))
+	fenetre.blit(im-carte, (x,y))
