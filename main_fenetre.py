@@ -18,5 +18,5 @@ def main():
 
 	pygame.display.flip()
 
-	
+	return fenetre
 

@@ -1,11 +1,11 @@
 import pygame
 from pygame.locals import * 
 from main_fenetre import main
-from fermeture import fermeture
+from event import event
 pygame.init()
 
 main()
 
-fermeture()
+event()
 
 
