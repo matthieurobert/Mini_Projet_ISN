@@ -5,117 +5,169 @@ def tirage_de_la_carte():
 
 
     pygame.init()
-
+    valeur=int
     carte = paquets()[:1] #on tire une carte
     del paquets()[:1] #on l'enlève du paquet
 
     if carte==['as de ♠']:
         card = pygame.image.load("cartes/as♠.png").convert()
+        #!!!!!! je n'ai rien mis il est spécial : as 1-11 il faudra faire une    def choix avec deux boutons 1 ou 11 ?
     if carte==['2 de ♠']:
         card = pygame.image.load("cartes/2♠.png").convert()
+        valeur=2
     if carte==['3 de ♠']:
         card = pygame.image.load("cartes/3♠.png").convert()
+        valeur=2
     if carte==['4 de ♠']:
        card = pygame.image.load("cartes/4♠.png").convert()
+       valeur=4
     if carte==['5 de ♠']:
         card = pygame.image.load("cartes/5♠.png").convert()
+        valeur=5
     if carte==['6 de ♠']:
         card = pygame.image.load("cartes/6♠.png").convert()
+        valeur=6
     if carte==['7 de ♠']:
         card = pygame.image.load("cartes/7♠.png").convert()
+        valeur=7
     if carte==['8 de ♠']:
         card = pygame.image.load("cartes/8♠.png").convert()
+        valeur=8
     if carte==['9 de ♠']:
         card = pygame.image.load("cartes/9♠.png").convert()
+        valeur=9
     if carte==['10 de ♠']:
         card = pygame.image.load("cartes/10♠.png").convert()
+        valeur=10
     if carte==['Valet de ♠']:
         card = pygame.image.load("cartes/J♠.png").convert()
+        valeur=10
     if carte==['Dame de ♠']:
         card = pygame.image.load("cartes/Q♠.png").convert()
+        valeur=10
     if carte==['Roi de ♠']:
         card = pygame.image.load("cartes/K♠.png").convert()
+        valeur=10
 
     if carte==['as de ♣']:
         card = pygame.image.load("cartes/as♣.png").convert()
+                                                                                    #!!!!!! je n'ai rien mis il est spécial : as 1-11
     if carte==['2 de ♣']:
         card = pygame.image.load("cartes/2♣.png").convert()
+        valeur=2
     if carte==['3 de ♣']:
         card = pygame.image.load("cartes/3♣.png").convert()
+        valeur=3
     if carte==['4 de ♣']:
         card = pygame.image.load("cartes/4♣.png").convert()
+        valeur=4
     if carte==['5 de ♣']:
         card = pygame.image.load("cartes/5♣.png").convert()
+        valeur=5
     if carte==['6 de ♣']:
         card = pygame.image.load("cartes/6♣.png").convert()
+        valeur=6
     if carte==['7 de ♣']:
         card = pygame.image.load("cartes/7♣.png").convert()
+        valeur=7
     if carte==['8 de ♣']:
         card = pygame.image.load("cartes/8♣.png").convert()
+        valeur=8
     if carte==['9 de ♣']:
         card = pygame.image.load("cartes/9♣.png").convert()
+        valeur=9
     if carte==['10 de ♣']:
         card = pygame.image.load("cartes/10♣.png").convert()
+        valeur=10
     if carte==['Valet de ♣']:
         card = pygame.image.load("cartes/J♣.png").convert()
+        valeur=10
     if carte==['Dame de ♣']:
         card = pygame.image.load("cartes/Q♣.png").convert()
+        valeur=10
     if carte==['Roi de ♣']:
         card = pygame.image.load("cartes/K♣.png").convert()
+        valeur=10
 
     if carte==['as de ♥']:
         card = pygame.image.load("cartes/as♥.png").convert()
+                                                                                     #!!!!!! je n'ai rien mis il est spécial : as 1-11
     if carte==['2 de ♥']:
         card = pygame.image.load("cartes/2♥.png").convert()
+        valeur=2
     if carte==['3 de ♥']:
         card = pygame.image.load("cartes/3♥.png").convert()
+        valeur=3
     if carte==['4 de ♥']:
         card = pygame.image.load("cartes/4♥.png").convert()
+        valeur=4
     if carte==['5 de ♥']:
         card = pygame.image.load("cartes/5♥.png").convert()
+        valeur=5
     if carte==['6 de ♥']:
         card = pygame.image.load("cartes/6♥.png").convert()
+        valeur=6
     if carte==['7 de ♥']:
         card = pygame.image.load("cartes/7♥.png").convert()
+        valeur=7
     if carte==['8 de ♥']:
         card = pygame.image.load("cartes/8♥.png").convert()
+        valeur=8
     if carte==['9 de ♥']:
         card = pygame.image.load("cartes/9♥.png").convert()
+        valeur=9
     if carte==['10 de ♥']:
         card = pygame.image.load("cartes/10♥.png").convert()
+        valeur=10
     if carte==['Valet de ♥']:
         card = pygame.image.load("cartes/J♥.png").convert()
+        valeur=10
     if carte==['Dame de ♥']:
         card = pygame.image.load("cartes/Q♥.png").convert()
+        valeur=10
     if carte==['Roi de ♥']:
         card = pygame.image.load("cartes/K♥.png").convert()
+        valeur=10
 
     if carte==['as de ♦']:
         card = pygame.image.load("cartes/as♦.png").convert()
+                                                                                     #!!!!!! je n'ai rien mis il est spécial : as 1-11
     if carte==['2 de ♦']:
         card = pygame.image.load("cartes/2♦.png").convert()
+        valeur=2
     if carte==['3 de ♦']:
         card = pygame.image.load("cartes/3♦.png").convert()
+        valeur=3
     if carte==['4 de ♦']:
         card = pygame.image.load("cartes/4♦.png").convert()
+        valeur=4
     if carte==['5 de ♦']:
         card = pygame.image.load("cartes/5♦.png").convert()
+        valeur=5
     if carte==['6 de ♦']:
         card = pygame.image.load("cartes/6♦.png").convert()
+        valeur=6
     if carte==['7 de ♦']:
         card = pygame.image.load("cartes/7♦.png").convert()
+        valeur=7
     if carte==['8 de ♦']:
         card = pygame.image.load("cartes/8♦.png").convert()
+        valeur=8
     if carte==['9 de ♦']:
         card = pygame.image.load("cartes/9♦.png").convert()
+        valeur=9
     if carte==['10 de ♦']:
         card = pygame.image.load("cartes/10♦.png").convert()
+        valeur=10
     if carte==['Valet de ♦']:
         card = pygame.image.load("cartes/J♦.png").convert()
+        valeur=10
     if carte==['Dame de ♦']:
         card = pygame.image.load("cartes/Q♦.png").convert()
+        valeur=10
     if carte==['Roi de ♦']:
         card = pygame.image.load("cartes/K♦.png").convert()
+        valeur=10
 
     del carte
     return card
