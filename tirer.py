@@ -8,3 +8,4 @@ def bouton_tirer():
 	tirer = pygame.image.load("tirer.png").convert()
 
 	return tirer
+bouton_tirer
