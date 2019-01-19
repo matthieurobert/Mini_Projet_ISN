@@ -21,8 +21,10 @@ def main():
     carte = tirage_de_la_carte()
     fenetre.blit(carte, (485,435))
 
-    croupier = pygame.image.load("croupier.png").convert()
-    fenetre.blit(croupier, (485, 0))
+
+
+    carte = tirage_de_la_carte()
+    fenetre.blit(carte, (505,435))
 
     boutonTirage = bouton_tirer()
     fenetre.blit(boutonTirage, (650,625))
@@ -35,7 +37,7 @@ def main():
                 if event.button == 1 and 650<= event.pos[0] <= 825 and 625 <= event.pos[1] <= 719:
                     carte2 = tirage_de_la_carte()
 
-                    fenetre.blit(carte2, (505,435))
+                    fenetre.blit(carte2, (525,435))
 
             pygame.display.flip()
 
