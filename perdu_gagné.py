@@ -16,3 +16,5 @@ def GAGNE():
     pygame.init()
 
     gagne = pygame.image.load("gagné.png").convert_alpha()
+
+    return(gagne)

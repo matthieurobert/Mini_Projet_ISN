@@ -12,6 +12,7 @@ def main():
 
 
     somme=0                                                                     # la valeur des cartes
+    croupier= 0
 
     fenetre = windows()                                                          # on créer une fenêtre
 
@@ -27,7 +28,8 @@ def main():
     somme = somme + carte[1]
     print(somme)
 
-    pos = 525
+    pos_player = 525
+    pos_croup = 485
 
 
     carte = tirage_de_la_carte()                                                 # on refait de même mais avec une autre carte
@@ -51,31 +53,57 @@ def main():
                     somme = somme + carte2[1]
                     
                     print(somme)
-                    fenetre.blit(carte2[0], (pos,435))                             # affiche la carte
-                    pos = pos + 20
+                    fenetre.blit(carte2[0], (pos_player,435))                             # affiche la carte
+                    pos_player = pos_player + 20
                     pygame.display.flip()
 
+                    if somme > 21 :
+                    	perdu = PERDU()
+                    	fenetre.blit(perdu,(250,215))
+                    	continuer = 0
+
                 if event.button == 1 and 90<= event.pos[0] <= 575 and 625 <= event.pos[1] <= 719:
+                	if croupier == 0 :
+                		carte_croup1 =tirage_de_la_carte()
+                		croupier = croupier + carte_croup1[1]
+                		print("c o croupier")
+                		print(croupier)
 
-                    #CROUPIER A FAIRE#
-                    print("c pas fini ...")
+                		fenetre.blit(carte_croup1[0], (pos_croup, 50))
+                		pos_croup = pos_croup + 20
+                		pygame.display.flip()
 
-            if somme > 21:
-                perdu = PERDU()
-                fenetre.blit(perdu,(250,215))
-                continuer = 0
+                		carte_croup2 = tirage_de_la_carte()
+                		croupier = croupier + carte_croup2[1]
 
+                		print(croupier)
+                		fenetre.blit(carte_croup2 [0], (pos_croup, 50))
+                		pos_croup = pos_croup + 20
+                		pygame.display.flip()
 
+                		while croupier <= 17:
+                			carte_croup3 = tirage_de_la_carte()
+                			croupier = croupier + carte_croup3[1]
 
+                			print(croupier)
 
+                			fenetre.blit(carte_croup3[0], (pos_croup, 50))
+                			pos_croup = pos_croup + 20
+                			pygame.display.flip()
 
+        if croupier >= 1:
 
+        	if (somme > 21 and somme < croupier) or croupier == 21:
+        		perdu = PERDU()
+        		fenetre.blit(perdu,(250,215))
+        		continuer = 0
 
+        	elif somme > croupier or croupier > 21:
+        		gagne = GAGNE()
+        		fenetre.blit(gagne,(250,215))
+        		continuer = 0
 
-
-            pygame.display.flip()                                                # raffraichi la fenêtre
-
-
+        	pygame.display.flip()                                                # raffraichi la fenêtre
         pygame.display.flip()                                                    # raffraichi la fenêtre
 
 
