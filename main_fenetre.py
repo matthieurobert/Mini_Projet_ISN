@@ -2,8 +2,7 @@ import pygame
 from pygame.locals import *
 
 def main():
-    from tirage_carte import tirage_de_la_carte
-    from tirage_carte import tirage_de_la_carte2                                    # on importe tous les programmes dont nous avons besoins
+    from tirage_carte import tirage_de_la_carte                                    # on importe tous les programmes dont nous avons besoins
     from perdu_gagné  import PERDU
     from perdu_gagné  import GAGNE
     from tirer import bouton_tirer
@@ -28,6 +27,7 @@ def main():
     somme = somme + carte[1]
     print(somme)
 
+    pos = 525
 
 
     carte = tirage_de_la_carte()                                                 # on refait de même mais avec une autre carte
@@ -36,24 +36,26 @@ def main():
     print(somme)
 
     boutonTirage = bouton_tirer()                                                #on affiche le bouton tirer
-    fenetre.blit(boutonTirage, (650,625))                                       #on l'affiche aux coordonnées 650,625
+    fenetre.blit(boutonTirage, (875,625))                                       #on l'affiche aux coordonnées 650,625
 
     boutonSTOP = bouton_stop()
-    fenetre.blit(boutonSTOP,(400,625))
+    fenetre.blit(boutonSTOP,(90,625))
 
     while continuer:                                                             # boucle qui permet de garder la fenêtre ouverte
         for event in pygame.event.get():                                         # si il y a un événement de type "CLICK" faire:
             if event.type == QUIT:                                               # si l'événement est de type quitter alors on ferme la fenêtre
                 continuer = 0
        	    if event.type == MOUSEBUTTONDOWN:                                    # si l'on clique avec la souris:
-                if event.button == 1 and 650<= event.pos[0] <= 825 and 625 <= event.pos[1] <= 719: # si le clic est dans cette zone ( TIRER ) :
+                if event.button == 1 and 875<= event.pos[0] <= 1050 and 625 <= event.pos[1] <= 719: # si le clic est dans cette zone ( TIRER ) :
                     carte2 = tirage_de_la_carte()                                # importe une carte
                     somme = somme + carte2[1]
+                    
                     print(somme)
-                    fenetre.blit(carte2[0], (525,435))                             # affiche la carte
+                    fenetre.blit(carte2[0], (pos,435))                             # affiche la carte
+                    pos = pos + 20
                     pygame.display.flip()
 
-                if event.button == 1 and 400<= event.pos[0] <= 575 and 625 <= event.pos[1] <= 719:
+                if event.button == 1 and 90<= event.pos[0] <= 575 and 625 <= event.pos[1] <= 719:
 
                     #CROUPIER A FAIRE#
                     print("c pas fini ...")
