@@ -18,7 +18,7 @@ def main():
 
     continuer = 1
 
-    pygame.init()                                                                # on rafraichi la fenêtre
+    pygame.init()                                                                # on initialise pygame
 
     table = pygame.image.load("blackjack_table.png").convert()                   # on importe l'image "blackjack_table.png"
     fenetre.blit(table, (0,0))                                                   #on l'affiche à partir des coordonnées 0,0
