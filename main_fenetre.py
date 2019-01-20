@@ -24,15 +24,15 @@ def main():
     fenetre.blit(table, (0,0))                                                   #on l'affiche à partir des coordonnées 0,0
 
     carte = tirage_de_la_carte()                                                 # on récupère la carte du programme tirage_de_la_carte
-    fenetre.blit(carte, (485,435))                                               # dont la résultante et l'image obtenue Ex: 1♣.png
-    somme = somme + tirage_de_la_carte2()
+    fenetre.blit(carte[0], (485,435))                                               # dont la résultante et l'image obtenue Ex: 1♣.png
+    somme = somme + carte[1]
     print(somme)
 
 
 
     carte = tirage_de_la_carte()                                                 # on refait de même mais avec une autre carte
-    fenetre.blit(carte, (505,435))                                               # on la décalle de 20 pixels par rapport à l'autre carte
-    somme = somme + tirage_de_la_carte2()
+    fenetre.blit(carte[0], (505,435))                                               # on la décalle de 20 pixels par rapport à l'autre carte
+    somme = somme + carte[1]
     print(somme)
 
     boutonTirage = bouton_tirer()                                                #on affiche le bouton tirer
@@ -48,9 +48,9 @@ def main():
        	    if event.type == MOUSEBUTTONDOWN:                                    # si l'on clique avec la souris:
                 if event.button == 1 and 650<= event.pos[0] <= 825 and 625 <= event.pos[1] <= 719: # si le clic est dans cette zone ( TIRER ) :
                     carte2 = tirage_de_la_carte()                                # importe une carte
-                    somme = somme + tirage_de_la_carte2()
+                    somme = somme + carte2[1]
                     print(somme)
-                    fenetre.blit(carte2, (525,435))                             # affiche la carte
+                    fenetre.blit(carte2[0], (525,435))                             # affiche la carte
                     pygame.display.flip()
 
                 if event.button == 1 and 400<= event.pos[0] <= 575 and 625 <= event.pos[1] <= 719:

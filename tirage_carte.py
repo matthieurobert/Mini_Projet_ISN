@@ -171,7 +171,9 @@ def tirage_de_la_carte():
         valeur=10
 
     del carte
-    return (card)                                                       #on retourne la valeur card qui est une image et "valeur" (si ca marche)
+
+    liste = [card , valeur]
+    return (liste)                                                       #on retourne la valeur card qui est une image et "valeur" (si ca marche)
 
 def tirage_de_la_carte2():
     from initpaquet import paquets
@@ -345,6 +347,9 @@ def tirage_de_la_carte2():
 
     del carte
     return ( valeur)
+
+def valeur_carte():
+	carte = tirage_de_la_carte()
 
 
 
