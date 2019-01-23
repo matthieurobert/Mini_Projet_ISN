@@ -73,6 +73,8 @@ def main():
                 		pos_croup = pos_croup + 20
                 		pygame.display.flip()
 
+                		pygame.time.wait(1000)
+
                 		carte_croup2 = tirage_de_la_carte()
                 		croupier = croupier + carte_croup2[1]
 
@@ -80,6 +82,8 @@ def main():
                 		fenetre.blit(carte_croup2 [0], (pos_croup, 50))
                 		pos_croup = pos_croup + 20
                 		pygame.display.flip()
+
+                		pygame.time.wait(2000)
 
                 		while croupier <= 17:
                 			carte_croup3 = tirage_de_la_carte()
@@ -91,16 +95,22 @@ def main():
                 			pos_croup = pos_croup + 20
                 			pygame.display.flip()
 
+                			pygame.time.wait(2000)
+
+        pygame.time.wait(5000)
+
         if croupier >= 1:
 
         	if (somme > 21 and somme < croupier) or croupier == 21:
         		perdu = PERDU()
         		fenetre.blit(perdu,(250,215))
+        		pygame;time.wait(5000)
         		continuer = 0
 
         	elif somme > croupier or croupier > 21:
         		gagne = GAGNE()
         		fenetre.blit(gagne,(250,215))
+        		pygame.time.wait(5000)
         		continuer = 0
 
         	pygame.display.flip()                                                # raffraichi la fenêtre
