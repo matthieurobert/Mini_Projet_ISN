@@ -65,37 +65,37 @@ def main():
                 if event.button == 1 and 90<= event.pos[0] <= 575 and 625 <= event.pos[1] <= 719:# Si on clique sur le bouton ( STOP )
                 	if croupier == 0 :
                 		carte_croup1 =tirage_de_la_carte()
-                		croupier = croupier + carte_croup1[1]   
+                		croupier = croupier + carte_croup1[1]  # On actualise la valeur des cartes du croupier 
                 		print("c o croupier")
                 		print(croupier)
 
-                		fenetre.blit(carte_croup1[0], (pos_croup, 50))
-                		pos_croup = pos_croup + 20
+                		fenetre.blit(carte_croup1[0], (pos_croup, 50))        # affiche la carte
+                		pos_croup = pos_croup + 20                 # On décale la carte à afficher de 20 pixels
                 		pygame.display.flip()
 
-                		pygame.time.wait(1000)
+                		pygame.time.wait(1000)                # On fais une pause de 1 seconde
 
                 		carte_croup2 = tirage_de_la_carte()
-                		croupier = croupier + carte_croup2[1]
+                		croupier = croupier + carte_croup2[1]         # On actualise la valeur des cartes du croupier 
 
                 		print(croupier)
-                		fenetre.blit(carte_croup2 [0], (pos_croup, 50))
-                		pos_croup = pos_croup + 20
+                		fenetre.blit(carte_croup2 [0], (pos_croup, 50))           # affiche la carte
+                		pos_croup = pos_croup + 20                 # On décale la carte à afficher de 20 pixels
                 		pygame.display.flip()
 
-                		pygame.time.wait(2000)
+                		pygame.time.wait(2000)                # On fais une pause de 2 seconde
 
                 		while croupier <= 17:
                 			carte_croup3 = tirage_de_la_carte()
-                			croupier = croupier + carte_croup3[1]
+                			croupier = croupier + carte_croup3[1]            # On actualise la valeur des cartes du croupier 
 
                 			print(croupier)
 
-                			fenetre.blit(carte_croup3[0], (pos_croup, 50))
-                			pos_croup = pos_croup + 20
+                			fenetre.blit(carte_croup3[0], (pos_croup, 50))       # affiche la carte
+                			pos_croup = pos_croup + 20            # On décale la carte à afficher de 20 pixels
                 			pygame.display.flip()
 
-                			pygame.time.wait(2000)
+                			pygame.time.wait(2000)               # On fais une pause de 2 seconde
 
                 		if croupier >= 1 :
 
@@ -108,7 +108,7 @@ def main():
                                     elif somme >= croupier or croupier > 21:
                                         gagne = GAGNE()
                                         fenetre.blit(gagne,(250,215))
-                                        pygame.time.wait(5000)
+                                        
                                         
 
             pygame.display.flip()        # raffraichi la fenêtre
