@@ -1,4 +1,4 @@
-#il y a un problème il faut modifier le début car la valeur et la carte ne sont pas pareils sa veut dire que la valeur et l'image on deut paquets diff
+
 from pygame.locals import *
 def tirage_de_la_carte():
     from initpaquet import paquets
